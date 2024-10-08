@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/biblioteca/
+
+logging:
+  level:
+    org:
+      hibernate: ERROR
+      springframework:
+        web: ERROR
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 5o2eje
+  jpa:
+    database: POSTGRESQL
+    hibernate.ddl-auto: none
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate.default_schema: library_owner
+
+
+google:
+  books:
+    base_url: https://www.googleapis.com/books/v1/
+    api_key:
